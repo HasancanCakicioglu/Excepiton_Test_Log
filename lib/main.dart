@@ -3,7 +3,10 @@
 
 import 'package:Exception_Test_Log/Logger/logger1/LoggerView1.dart';
 import 'package:Exception_Test_Log/Logger/logger2/loggerView2.dart';
+import 'package:Exception_Test_Log/devtools/repaintBoundray1.dart';
 import 'package:Exception_Test_Log/exception/exception1/exceptionView1.dart';
+import 'package:Exception_Test_Log/exception/exception2/error2.dart';
+import 'package:Exception_Test_Log/safe_device/safe_device.dart';
 import 'package:flutter/material.dart';
 
 
@@ -44,8 +47,11 @@ class _HomeState extends State<Home> {
       body: Wrap(
         children: [
             goNavigate(exceptionViewclass1(),"Exception 1", context),
+            goNavigate(exception2viewclass(),"Exception 2", context),
             goNavigate(loggerviewclass1(),"Logger 1", context),
             goNavigate(loggerviewclass2(),"Logger 2", context),
+            goNavigate(AreaRepaintsPage(),"DevTools repaintBoundary ", context),
+            goNavigate(safeDeviceView(),"safe device", context),
             
         ],
       ),
